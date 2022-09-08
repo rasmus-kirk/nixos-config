@@ -11,7 +11,7 @@ username: { config, pkgs, lib, ... }:
 		"L+ /home/${username}/.local/share/newsboat         - - - - /data/.state/newsboat"
 		"L+ /home/${username}/.config/newsboat/linkhandler  - - - - ${./link/linkhandler}"
 		"L+ /home/${username}/.config/newsboat/config       - - - - ${./link/config}"
-		"L+ /home/${username}/.config/newsboat/urls         - - - - ${./age.secrets.newsboat-urls.path}"
+		"L+ /home/${username}/.config/newsboat/urls         - - - - ${config.age.secrets.newsboat-urls.path}"
 	];
 
 	services.cron = {

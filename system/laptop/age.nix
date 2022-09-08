@@ -7,5 +7,5 @@
 	age.secrets.wg-mullvad.file = "/root/per/data/.secret/wg-mullvad.age";
 	age.secrets.mail-personal.file = "/root/per/data/.secret/mail-personal.age";
 	age.secrets.mail-university.file = "/root/per/data/.secret/mail-university.age";
-	age.secrets.newsboat-url.file = "/root/per/data/.secret/newsboat-url.age";
+	age.secrets.newsboat-urls.file = "/root/per/data/.secret/newsboat-urls.age";
 }
