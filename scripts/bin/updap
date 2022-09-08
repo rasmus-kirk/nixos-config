@@ -1,0 +1,45 @@
+#!/bin/sh
+if [[ $# -eq 1 ]]; then
+	audioPath="$1"
+else 
+	audioPath="/data/media/audio/"
+fi
+driveLabel="DAP"
+mntDrive="/dev/"$(lsblk -o name,label | grep $driveLabel | grep -o "^[^ ]*" | grep -o "[a-zA-Z0-9]*")""
+mntPath=$(mktemp -d)
+
+isInserted=$(lsblk -o name,label | grep "$driveLabel" | wc -l)
+isMounted=$(lsblk -o name,label | grep "$driveLabel" | grep "/" | wc -l)
+
+if [[ $isInserted == 1 ]]; then
+	if [[ $isMounted == 1 ]]; then
+		sudo umount "$mntDrive" ||
+		exit 0
+	fi
+
+	echo "" &&
+	echo "Mounting drive:" &&
+
+	sudo mount -t vfat -L "$driveLabel" "$mntPath" -o shortname=mixed -o utf8 &&
+
+	echo "" &&
+	echo "Drive mounted. Starting sync:" &&
+
+	sudo rsync -trv --modify-window=1 --delete --exclude="Android" --exclude="LOST.DIR" "$audioPath" "$mntPath" #| grep -E '^deleting|[^/]$' | grep -E '^deleting.*|[^\.m3u]$' &&
+
+	echo "" &&
+	echo "Rsync is finished. Unmounting..." &&
+
+	driveUsedSize=$(du -hd0 "$mntPath" | grep -Po "^[^ \t]*") &&
+	sudo umount "$mntDrive" &&
+
+	echo "" &&
+	echo "Unmounted succesfully. Disk space used:" &&
+
+	driveSize=$(lsblk --output LABEL,SIZE | grep "$driveLabel" | grep -Po "[^ \t]*$") &&
+
+	echo ""$driveUsedSize"/"$driveSize"" &&
+	echo ""
+else
+	echo "Error: No SD-card inserted!"
+fi

@@ -1,0 +1,12 @@
+#!/bin/sh
+if [[ $# -eq 5 ]]; then
+	ffmpeg -ss "$3" -to "$4" -i "$1" -c:v libx264 -crf "$5" -map_metadata -1 -map_chapters -1 "$2"
+elif [[ $# -eq 6 ]]; then
+	ffmpeg -ss "$3" -to "$4" -i "$1" -c:v libx264 -crf "$5" "$2" -vf "scale=$6" -map_metadata -1 -map_chapters -1
+else
+	echo "Error: Not enough arguments. Usage:"
+	echo ""
+	echo "ffcut <if> <of> <start-time> <end-time> <crf> (<w:h>)"
+	echo ""
+	echo "Where start and end time has format: xx:xx:xx.xxx. Note that low CRF is less compression"
+fi

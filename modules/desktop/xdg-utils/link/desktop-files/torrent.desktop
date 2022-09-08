@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Categories=Network;FileTransfer;P2P;Qt;
+GenericName=Torrent client
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;
+Name=Remote qBittorrent client
+Terminal=false
+Exec=/run/current-system/sw/bin/ssh user@192.168.0.69 -p 6000 add-torrent "%u"

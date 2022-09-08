@@ -1,0 +1,43 @@
+# vim: filetype=neomuttrc
+# muttrc file for account au650209@uni.au.dk
+set realname = "au650209"
+set from = "au650209@uni.au.dk"
+set sendmail = "msmtp -a au650209@uni.au.dk"
+alias me au650209 <au650209@uni.au.dk>
+set folder = "/home/user/.local/share/mail/au650209@uni.au.dk"
+set header_cache = /home/user/.cache/mutt-wizard/au650209@uni.au.dk/headers
+set message_cachedir = /home/user/.cache/mutt-wizard/au650209@uni.au.dk/bodies
+set mbox_type = Maildir
+
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index,pager M noop
+bind index,pager C noop
+bind index gg first-entry
+unmailboxes *
+unalternates *
+unset signature
+unmacro index o
+macro index o "<shell-escape>mw -y au650209@uni.au.dk<enter>" "run mbsync to sync au650209@uni.au.dk"
+
+mailboxes "=INBOX" "=Drafts" "=Junk" "=Sent" "=Trash" "=do-not-reply"
+macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+macro index,pager gd "<change-folder>=Drafts<enter>" "go to drafts"
+macro index,pager Md ";<save-message>=Drafts<enter>" "move mail to drafts"
+macro index,pager Cd ";<copy-message>=Drafts<enter>" "copy mail to drafts"
+macro index,pager gj "<change-folder>=Junk<enter>" "go to junk"
+macro index,pager Mj ";<save-message>=Junk<enter>" "move mail to junk"
+macro index,pager Cj ";<copy-message>=Junk<enter>" "copy mail to junk"
+set record = "+Sent"
+macro index,pager gs "<change-folder>=Sent<enter>" "go to sent"
+macro index,pager Ms ";<save-message>=Sent<enter>" "move mail to sent"
+macro index,pager Cs ";<copy-message>=Sent<enter>" "copy mail to sent"
+macro index,pager gt "<change-folder>=Trash<enter>" "go to trash"
+macro index,pager Mt ";<save-message>=Trash<enter>" "move mail to trash"
+macro index,pager Ct ";<copy-message>=Trash<enter>" "copy mail to trash"
+set trash = "+Trash"

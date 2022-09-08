@@ -1,0 +1,22 @@
+field birthday = Birthday, date
+field matrix = Matrix_ID, string
+
+view CONTACT = name, matrix, email
+view ADDRESS = address, city, state, zip, country
+view PHONE = phone, workphone, mobile, fax
+view OTHER = url, birthday
+
+set index_format=" {name:30} {mobile:10} {email:30} {matrix:30}"
+
+set use_colors=true
+set color_header_fg=green
+set color_header_bg=none
+set color_footer_bg=none
+set color_footer_fg=green
+set color_list_header_bg=none
+set color_list_header_fg=green
+set color_list_highlight_fg=black
+set color_list_highlight_bg=yellow
+set color_tab_label_fg=yellow
+set color_tab_border_fg=green
+

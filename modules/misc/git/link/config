@@ -1,0 +1,9 @@
+[user]
+	email = mail@rasmuskirk.com
+	name = rasmus-kirk
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[safe]
+	directory = /data/.system-configuration

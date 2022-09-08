@@ -1,0 +1,13 @@
+2021-08-21 16:46:18,765 - [INFO] Linux-5.13.11-x86_64-with-glibc2.2.5 - Python 3.8.8, deemix 2.0.16
+2021-08-21 16:46:19,088 - [INFO] Generating queue item for: https://www.deezer.com/us/track/595480662
+2021-08-21 16:46:19,299 - [INFO] [track_595480662_9] Added to queue.
+2021-08-21 16:46:19,300 - [INFO] [track_595480662_9] Started downloading.
+2021-08-21 16:46:19,301 - [INFO] [fhana - Rhapsody of Blue Sky] Getting the tags
+2021-08-21 16:46:20,336 - [INFO] [fhana - Rhapsody of Blue Sky] Fallback to lower bitrate
+2021-08-21 16:46:20,610 - [INFO] [fhana - Rhapsody of Blue Sky] Getting the album cover
+2021-08-21 16:46:20,945 - [INFO] [fhana - Rhapsody of Blue Sky] Downloading the track
+2021-08-21 16:46:21,068 - [INFO] [fhana - Rhapsody of Blue Sky] downloading 11122937 bytes
+2021-08-21 16:46:22,685 - [INFO] [fhana - Rhapsody of Blue Sky] Applying tags to the track
+2021-08-21 16:46:22,705 - [INFO] [fhana - Rhapsody of Blue Sky] Track download completed
+/home/user/downloads/audio/fhana - Rhapsody of Blue Sky.mp3
+2021-08-21 16:46:22,705 - [INFO] [track_595480662_9] Finished downloading.

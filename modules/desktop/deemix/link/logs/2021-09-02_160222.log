@@ -1,0 +1,15 @@
+2021-09-02 16:02:22,180 - [INFO] Linux-5.13.12-x86_64-with-glibc2.2.5 - Python 3.8.8, deemix 2.0.16
+2021-09-02 16:02:22,572 - [INFO] Generating queue item for: https://www.deezer.com/us/track/524975992
+2021-09-02 16:02:22,756 - [INFO] [track_524975992_9] Added to queue.
+2021-09-02 16:02:22,756 - [INFO] [track_524975992_9] Started downloading.
+2021-09-02 16:02:22,756 - [INFO] [Spyair - I Wanna Be...] Getting the tags
+2021-09-02 16:02:24,007 - [INFO] [Spyair - I Wanna Be...] Fallback to lower bitrate
+2021-09-02 16:02:24,341 - [INFO] [Spyair - I Wanna Be...] Getting the album cover
+2021-09-02 16:02:24,868 - [INFO] [Spyair - I Wanna Be...] Downloading the track
+2021-09-02 16:02:25,074 - [INFO] [Spyair - I Wanna Be...] downloading 9445876 bytes
+2021-09-02 16:02:25,712 - [INFO] [Spyair - I Wanna Be...] Applying tags to the track
+2021-09-02 16:02:25,718 - [INFO] [Spyair - I Wanna Be...] Track download completed
+/home/user/downloads/audio/Spyair - I Wanna Be.mp3
+2021-09-02 16:02:25,718 - [INFO] [track_524975992_9] Finished downloading.
+2021-09-02 16:02:25,718 - [INFO] Generating queue item for: https://www.deezer.com/us/track/524975992
+2021-09-02 16:02:26,024 - [WARNING] [track_524975992_9] Already in queue, will not be added again.

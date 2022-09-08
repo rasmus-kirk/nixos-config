@@ -1,0 +1,14 @@
+#!/bin/sh
+fzfound=$(ls /data/media/audio/playlists/ | grep -o "^[^\.]*" | fzf --print-query)
+if [ -z "$(echo $fzfound | awk '{print $2}')" ]; then
+	name=$(echo $fzfound | awk '{print $1}')
+else
+	name=$(echo $fzfound | awk '{print $2}')
+fi
+
+selection=${NNN_SEL:-${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection}
+if test -f "$selection"; then
+	cat "$selection" | sed 's/\x0/\n/g' | sed 's#/data/media/audio#..#g' >> /data/media/audio/playlists/"$name".m3u
+else
+	echo "Error: No selection"
+fi

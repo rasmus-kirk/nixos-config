@@ -1,0 +1,8 @@
+#!/bin/sh
+
+selection=${NNN_SEL:-${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection}
+if test -f "$selection"; then
+    xargs -o -0 mpv --no-video --loop-playlist < "$selection"
+else
+    mpv --no-video "$1"
+fi

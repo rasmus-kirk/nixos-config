@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=application
+Name=mpv
+Exec=open-mpv %u
+#Exec=/usr/bin/touch %u ; /usr/bin/mpv %u

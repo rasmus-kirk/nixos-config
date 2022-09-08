@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=application
+Name=Audio Player
+Terminal=false
+Exec=/run/current-system/sw/bin/mpv --force-window %u

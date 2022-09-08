@@ -1,0 +1,13 @@
+2021-08-21 16:48:07,638 - [INFO] Linux-5.13.11-x86_64-with-glibc2.2.5 - Python 3.8.8, deemix 2.0.16
+2021-08-21 16:48:07,880 - [INFO] Generating queue item for: https://www.deezer.com/us/track/1414460062
+2021-08-21 16:48:08,071 - [INFO] [track_1414460062_9] Added to queue.
+2021-08-21 16:48:08,071 - [INFO] [track_1414460062_9] Started downloading.
+2021-08-21 16:48:08,071 - [INFO] [fhana - Love Supreme!] Getting the tags
+2021-08-21 16:48:08,996 - [INFO] [fhana - Love Supreme!] Fallback to lower bitrate
+2021-08-21 16:48:09,254 - [INFO] [fhana - Love Supreme!] Getting the album cover
+2021-08-21 16:48:09,256 - [INFO] [fhana - Love Supreme!] Downloading the track
+2021-08-21 16:48:09,395 - [INFO] [fhana - Love Supreme!] downloading 11362219 bytes
+2021-08-21 16:48:10,922 - [INFO] [fhana - Love Supreme!] Applying tags to the track
+2021-08-21 16:48:10,939 - [INFO] [fhana - Love Supreme!] Track download completed
+/home/user/downloads/audio/fhana - Love Supreme!.mp3
+2021-08-21 16:48:10,939 - [INFO] [track_1414460062_9] Finished downloading.

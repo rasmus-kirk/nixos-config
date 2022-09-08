@@ -1,0 +1,31 @@
+[Default Applications]
+application/octet-stream=audio.desktop
+application/pdf=pdf.desktop
+application/x-bittorrent=torrent.desktop
+application/x-shellscript=kak.desktop
+audio/flac=audio.desktop
+audio/mpeg=audio.desktop
+audio/x-vorbis+ogg=audio.desktop
+image/gif=img.desktop
+image/jpeg=img.desktop
+image/png=img.desktop
+image/webp=img.desktop
+inode/directory=dir.desktop
+text/html=firefox.desktop
+text/markdown=kak.desktop
+text/plain=kak.desktop
+text/x-csrc=kak.desktop
+text/x-haskell=kak.desktop
+text/x-ocaml=kak.desktop
+text/x-python=kak.desktop
+video/mp4=vid.desktop
+video/x-matroska=vid.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/magnet=torrent.desktop
+
+[Added Associations]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+application/x-bittorrent=org.qbittorrent.qBittorrent.desktop;
+video/mp4=mpv.desktop;firefox.desktop;

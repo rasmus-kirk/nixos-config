@@ -1,0 +1,13 @@
+#!/bin/sh
+ext=$(echo $1 | grep -o "[^\.]*$")
+echo $1
+echo $ext
+
+case $ext in
+	"cbr" | "cbz" | "rar")
+		unar "$1";;
+	"zip")
+		unzip "$1";;
+	*)
+		echo "File format not supported. Supported extensions: cbr, cbz, zip, rar";;
+esac

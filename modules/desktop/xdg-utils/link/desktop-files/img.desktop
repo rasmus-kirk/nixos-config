@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=application
+Name=mvi
+Exec=mpv --config-dir=/home/user/.config/mvi %u

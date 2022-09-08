@@ -1,0 +1,21 @@
+account mail@rasmuskirk.com
+host smtp.mailbox.org
+port 587
+from mail@rasmuskirk.com
+user mail@rasmuskirk.com
+passwordeval "cat /data/.secret/mail/mail@rasmuskirk.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/user/.config/msmtp/msmtp.log
+
+account au650209@uni.au.dk
+host post.au.dk
+port 587
+from au650209@uni.au.dk
+user au650209@uni.au.dk
+passwordeval "cat /data/.secret/mail/au650209@uni.au.dk"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/user/.config/msmtp/msmtp.log

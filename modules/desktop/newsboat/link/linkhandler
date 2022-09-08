@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Define invidious instance (youtube proxy)
+invidious_instance=yewtu.be
+
+## Fetch information from url
+site=$(echo $1 | grep -o "://[^/]*" | grep -o "[^/]*$")
+ext=$(echo $1 | grep -o "\.[^/.]*$" | grep -o "^[^/?]*" | grep -o "[^\.]*")
+name_by_url=$(echo $1 | grep -o "[^/]*$" | grep -o "^[^\?]*")
+
+## Check by url
+case $site in
+	"www.bitchute.com" | "videos.lukesmith.xyz" | "odysee.com")
+		mpv --fullscreen --profile=M30 $1 </dev/null &>/dev/null &
+		exit 0;;
+	"www.youtube.com")
+		invidious=$(echo $1 | sed 's/www.youtube.com/'$invidious_instance'/g')
+		mpv --fullscreen --profile=M30 $invidious </dev/null &>/dev/null &
+		exit 0;;
+	"nyaa.si" | "ddl.erai-raws.info")
+		qbittorrent $1 </dev/null &>/dev/null &
+		exit 0;;
+	"stonetoss.com")
+		mpv --config-dir=$HOME/.config/mvi $(curl $1 | grep -A1 "id=\"comic\"" | grep -o "http[^\"]*") </dev/null &>/dev/null &
+		exit 0;;
+esac
+
+## Check by file extenstion
+case $ext in
+	"mp3" | "ogg")
+		yt-dlp -o "/data/downloads/audio/$name_by_url" $1 </dev/null &>/dev/null &
+		exit 0;;
+esac
+
+## If no matches are found, use default browser
+$BROWSER $1 </dev/null &>/dev/null &

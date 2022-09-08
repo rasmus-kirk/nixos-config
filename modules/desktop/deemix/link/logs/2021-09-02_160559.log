@@ -1,0 +1,13 @@
+2021-09-02 16:05:59,166 - [INFO] Linux-5.13.12-x86_64-with-glibc2.2.5 - Python 3.8.8, deemix 2.0.16
+2021-09-02 16:05:59,570 - [INFO] Generating queue item for: https://www.deezer.com/us/track/976337262
+2021-09-02 16:05:59,853 - [INFO] [track_976337262_9] Added to queue.
+2021-09-02 16:05:59,853 - [INFO] [track_976337262_9] Started downloading.
+2021-09-02 16:05:59,854 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Getting the tags
+2021-09-02 16:06:01,202 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Fallback to lower bitrate
+2021-09-02 16:06:01,608 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Getting the album cover
+2021-09-02 16:06:01,961 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Downloading the track
+2021-09-02 16:06:02,151 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] downloading 11019493 bytes
+2021-09-02 16:06:02,859 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Applying tags to the track
+2021-09-02 16:06:02,865 - [INFO] [BURNOUT SYNDROMES - Hanaichimonme] Track download completed
+/home/user/downloads/audio/BURNOUT SYNDROMES - Hanaichimonme.mp3
+2021-09-02 16:06:02,866 - [INFO] [track_976337262_9] Finished downloading.

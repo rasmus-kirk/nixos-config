@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=application
+Name=nnn
+Exec=/run/current-system/sw/bin/foot nnn %u

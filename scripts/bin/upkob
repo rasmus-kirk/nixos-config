@@ -1,0 +1,46 @@
+#!/bin/sh
+if [[ $# -eq 1 ]]; then
+	bookPath="$1"
+else 
+	bookPath="/data/media/books/"
+fi
+
+driveLabel="KOBOeReader"
+mntDrive="/dev/"$(lsblk -o name,label | grep $driveLabel | grep -o "^[^ ]*")""
+mntPath=$(mktemp -d)
+
+isInserted=$(lsblk -f | grep "$driveLabel" | wc -l)
+isMounted=$(lsblk -f | grep "$driveLabel" | grep "/" | wc -l)
+
+if [[ $isInserted == 1 ]]; then
+	if [[ $isMounted == 1 ]]; then
+		sudo umount "$mntDrive" ||
+		exit 0
+	fi
+
+	echo "" &&
+	echo "Mounting drive..." &&
+
+	sudo mount -L "$driveLabel" "$mntPath" &&
+
+	echo "" &&
+	echo "Mount succesfull. Starting rsync..." &&
+
+	sudo rsync -trvl --modify-window=1 --delete --exclude='.*' --exclude='kfmon.png' --exclude='koreader.png' --exclude='icons' --exclude='Screenshots' "$bookPath" "$mntPath" &&
+
+	echo "" &&
+	echo "Rsync is finished. Unmounting..." &&
+
+	driveUsedSize=$(du -hd0 "$mntPath" | grep -Po "^[^ \t]*") &&
+	sudo umount "$mntDrive" &&
+
+	echo "" &&
+	echo "Unmounted succesfully. Disk space used:" &&
+
+	driveSize=$(lsblk --output LABEL,SIZE | grep "$driveLabel" | grep -Po "[^ \t]*$") &&
+
+	echo ""$driveUsedSize"/"$driveSize"" &&
+	echo ""
+else
+	echo "Error: Kobo not detected!"
+fi

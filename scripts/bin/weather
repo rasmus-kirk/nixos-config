@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -z $1 ]; then
+	curl -s wttr.in/Aarhus?lang=ja | head -n -3 | sed '2d'
+else
+	curl -s wttr.in/$1?lang=ja | head -n -3 | sed '2d'  
+fi

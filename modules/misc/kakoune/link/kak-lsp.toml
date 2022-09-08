@@ -1,0 +1,19 @@
+[language.rust]
+filetypes = ["rust"]
+roots = ["Cargo.toml"]
+command = "sh"
+args = [
+    "-c",
+    """
+        if path=$(rustup which rust-analyzer 2>/dev/null); then
+            "$path"
+        else
+            rust-analyzer
+        fi
+    """,
+]
+settings_section = "rust-analyzer"
+[language.rust.settings.rust-analyzer]
+# See https://rust-analyzer.github.io/manual.html#configuration
+hoverActions.enable = false # kak-lsp doesn't support this at the moment
+checkOnSave.overrideCommand = ["cargo", "check", "--message-format=json" "--target-dir target-lsp"]

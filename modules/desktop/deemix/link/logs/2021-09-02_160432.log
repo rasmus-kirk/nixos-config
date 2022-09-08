@@ -1,0 +1,12 @@
+2021-09-02 16:04:32,286 - [INFO] Linux-5.13.12-x86_64-with-glibc2.2.5 - Python 3.8.8, deemix 2.0.16
+2021-09-02 16:04:32,614 - [INFO] Generating queue item for: https://www.deezer.com/us/track/1176876362
+2021-09-02 16:04:32,852 - [INFO] [track_1176876362_9] Added to queue.
+2021-09-02 16:04:32,852 - [INFO] [track_1176876362_9] Started downloading.
+2021-09-02 16:04:32,853 - [INFO] [Spyair - Sakuramitsutsuki] Getting the tags
+2021-09-02 16:04:34,055 - [INFO] [Spyair - Sakuramitsutsuki] Getting the album cover
+2021-09-02 16:04:34,392 - [INFO] [Spyair - Sakuramitsutsuki] Downloading the track
+2021-09-02 16:04:34,578 - [INFO] [Spyair - Sakuramitsutsuki] downloading 28760564 bytes
+2021-09-02 16:04:36,378 - [INFO] [Spyair - Sakuramitsutsuki] Applying tags to the track
+2021-09-02 16:04:36,396 - [INFO] [Spyair - Sakuramitsutsuki] Track download completed
+/home/user/downloads/audio/Spyair - Sakuramitsutsuki.flac
+2021-09-02 16:04:36,397 - [INFO] [track_1176876362_9] Finished downloading.

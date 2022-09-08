@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=application
+Name=kakoune
+Exec=foot kak %u

@@ -1,0 +1,337 @@
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "v2" {
+    name[Group1]="zi";
+
+    // Combo keys
+    // Alt
+    key <LWIN> { [ Super_L, Super_L ] };
+    key <RWIN> { [ Super_R, Super_R ] };
+    key <MENU> { [ Super_R, Super_R ] };
+    key <PRSC> { [ Super_R, Super_R ] };
+
+    // Super
+    key <LALT> { [ Alt_L, Alt_L] };
+    key <RALT> { [ Alt_R, Alt_R ] };
+
+    // Control
+    key <LCTL> { [ Control_L, Control_L ] };
+    key <RCTL> { [ Control_R, Control_R ] };
+
+    // Special characters
+    key <TAB>  { [       Tab,       Tab ] };
+    // Modifier keys
+    // Shift modifier
+    key <LFSH> { [ Shift_L, Caps_Lock ] };
+    key <RTSH> { [ Shift_R, Caps_Lock ] };
+
+    // Symbol modifier
+    //key <LSGT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+
+    // Function modifier
+    key <CAPS> { [ ISO_Level5_Shift, ISO_Level5_Shift ] };
+
+    // Modifier mapping
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+
+
+    // Keyboard layout
+    // Four modifier levels
+    key.type[Group1] = "EIGHT_LEVEL";
+
+    // Space
+    key <SPCE> { [ space, space, space, space, space, space, space, space ] };
+
+    // First row
+    key <TLDE> { [      grave, asciitilde,      grave, asciitilde,        grave,   asciitilde,        grave,        grave ] };
+    key <AE01> { [          1,     exclam,          1,     exclam,            1,       exclam,            1,            1 ] };
+    key <AE02> { [          2,         at,          2,         at,            2,           at,            2,            2 ] };
+    key <AE03> { [          3, numbersign,          3, numbersign,            3,   numbersign,            3,            3 ] };
+    key <AE04> { [          4,     dollar,          4,     dollar,            4,       dollar,            4,            4 ] };
+    key <AE05> { [          5,    percent,          5,    percent,            5,      percent,            5,            5 ] };
+    key <AE06> { [          6,asciicircum,          6,asciicircum,            6,  asciicircum,            6,            6 ] };
+    key <AE07> { [          7,  ampersand,          7,  ampersand,            7,    ampersand,            7,            7 ] };
+    key <AE08> { [          8,   asterisk,          8,   asterisk,            8,     asterisk,            8,            8 ] };
+    key <AE09> { [          9,  parenleft,          9,  parenleft,            9,    parenleft,            9,            9 ] };
+    key <AE10> { [          0, parenright,          0, parenright,           10,   parenright,           10,           10 ] };
+    key <AE11> { [      minus, underscore,         11, underscore,           11,   underscore,           11,           11 ] };
+    key <AE12> { [      equal,       plus,         12,       plus,           12,         plus,           12,           12 ] };
+
+    // Second row
+    key <AD01> { [ q, Q,            q,            Q,      q,        Q,      q,      q ] };
+    key <AD02> { [ w, W,            w,            W,      w,        W,      w,      w ] };
+    key <AD03> { [ e, E,            e,            E,      e,        E,      e,      e ] };
+    key <AD04> { [ r, R,            r,            R,      r,        R,      r,      r ] };
+    key <AD05> { [ t, T,            t,            T,      t,        T,      t,      t ] };
+    key <AD06> { [ y, Y,            y,            Y,      y,        Y,      y,      y ] };
+    key <AD07> { [ u, U,            u,            U,     ae,       AE,     ae,     ae ] };
+    key <AD08> { [ i, I,            i,            I, oslash, Ooblique, oslash, oslash ] };
+    key <AD09> { [ o, O,            o,            O,  aring,    Aring,  aring,  aring ] };
+    key <AD10> { [ p, P,            p,            P,      p,        P,      p,      p ] };
+    key <AD11> { [ bracketleft, braceleft, bracketleft, braceleft, bracketleft, braceleft, bracketleft, bracketleft ] };
+    key <AD12> { [ bracketright, braceright, bracketright, braceright, bracketright, braceright, bracketright, bracketright ] };
+
+    key <AD07> { [ u, U,            u,            U,     ae,       AE,     ae,     ae ] };
+    key <AD08> { [ i, I,            i,            I, oslash, Ooblique, oslash, oslash ] };
+    key <AD09> { [ o, O,            o,            O,  aring,    Aring,  aring,  aring ] };
+    key <AD10> { [ p, P,            p,            P,      p,        P,      p,      p ] };
+    // Third row
+    key <AC01> { [          a,         A,          a,          A,      a,      A,      a,      a ] };
+    key <AC02> { [          s,         S,          s,          S,     ae,       AE,     ae,     ae ] };
+    key <AC03> { [          d,         D,          d,          D, oslash, Ooblique, oslash, oslash ] };
+    key <AC04> { [          f,         F,          f,          F, aring,   Aring,  aring,  aring ] };
+    key <AC05> { [          g,         G,          g,          G,      g,      G,      g,      g ] };
+    key <AC06> { [          h,         H,          h,          H,   Left,   Left,   Left,   Left ] };
+    key <AC07> { [          j,         J,          j,          J,   Down,   Down,   Down,   Down ] };
+    key <AC08> { [          k,         K,          k,          K,     Up,     Up,     Up,     Up ] };
+    key <AC09> { [          l,         L,          l,          L,  Right,  Right,  Right,  Right ] };
+    key <AC10> { [  semicolon,     colon,  semicolon,      colon, Escape, Escape, Escape, Escape ] };
+    key <AC11> { [ apostrophe,  quotedbl, apostrophe,   quotedbl, Escape, Escape, Escape, Escape ] };
+
+    // Fourth row
+    key <LSGT> { [ BackSpace, BackSpace, BackSpace, BackSpace, BackSpace, BackSpace, BackSpace, BackSpace ] };
+    key <AB01> { [     z,         Z,       z,          Z,       z,          Z,       z,      z  ] };
+    key <AB02> { [     x,         X,       x,          X,       x,          X,       x,      x  ] };
+    key <AB03> { [     c,         C,       c,          C,       c,          C,       c,      c  ] };
+    key <AB04> { [     v,         V,       v,          V,       v,          V,       v,      v  ] };
+    key <AB05> { [     b,         B,       b,          B,       b,          B,       b,      b  ] };
+    key <AB06> { [     n,         N,       n,          N,       n,          N,       n,      n  ] };
+    key <AB07> { [     m,         M,       m,          M,       m,          M,       m,      m  ] };
+    key <AB08> { [  comma,     less,   comma,       less,   comma,       less,   comma,  comma  ] };
+    key <AB09> { [ period,  greater,  period,    greater,  period,    greater,  period, period  ] };
+    key <AB10> { [ slash,  question,   slash,   question,   slash,   question,   slash,   slash ] };
+    key <BKSL> { [ backslash, bar, backslash, bar, backslash, bar, bar ] };
+
+    key <MENU> { [ Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L ] };
+    key <I34>  { [ d, d, d, d, d, d, d ] };
+    key <I180> { [ d, d, d, d, d, d, d ] };
+
+    // Alpha mode
+
+    //key   <UP> { [ VoidSymbol ] };
+    //key <LEFT> { [ VoidSymbol ] };
+    //key <DOWN> { [ VoidSymbol ] };
+    //key <RGHT> { [ VoidSymbol ] };
+
+    //key <BKSP> { [ VoidSymbol ] };
+    //key <RTRN> { [ VoidSymbol ] };
+    //key <ESC>  { [ VoidSymbol ] };
+
+    //key <AE01> { [ VoidSymbol ] };
+    //key <AE02> { [ VoidSymbol ] };
+    //key <AE03> { [ VoidSymbol ] };
+    //key <AE04> { [ VoidSymbol ] };
+    //key <AE05> { [ VoidSymbol ] };
+    //key <AE06> { [ VoidSymbol ] };
+    //key <AE07> { [ VoidSymbol ] };
+    //key <AE08> { [ VoidSymbol ] };
+    //key <AE09> { [ VoidSymbol ] };
+    //key <AE10> { [ VoidSymbol ] };
+};
+
+
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "v1" {
+    // Four modifier levels
+    key.type[Group1] = "EIGHT_LEVEL";
+
+
+    // Modifier keys
+    // Shift modifier
+    key <LFSH> { [ Shift_L, Shift_Lock, Shift_L, Shift_Lock, Shift_L, Shift_Lock, Shift_L, Shift_Lock ] };
+    key <RTSH> { [ Shift_R, Shift_Lock, Shift_R, Shift_Lock, Shift_R, Shift_Lock, Shift_R, Shift_Lock ] };
+
+    // Symbol modifier
+    key <LSGT> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock, ISO_Level3_Lock, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock, ISO_Level3_Lock ] };
+    key <AB10> { [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock, ISO_Level3_Lock, ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock, ISO_Level3_Lock ] };
+
+    // Function modifier
+    key <CAPS> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ] };
+    key <AC11> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ] };
+    key <BKSL> { [ ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Shift, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ] };
+
+    // Modifier mapping
+    include "level3(modifier_mapping)"
+    include "level5(modifier_mapping)"
+
+
+    // Combo keys
+    // Alt
+    key <LWIN> { [ Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L ] };
+    key <RWIN> { [ Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R ] };
+    key <MENU> { [ Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R ] };
+    key <PRSC> { [ Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R, Alt_R ] };
+
+    // Super
+    key <LALT> { [ Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L ] };
+    key <RALT> { [ Super_R, Super_R, Super_R, Super_R, Super_R, Super_R, Super_R, Super_R ] };
+
+    // Control
+    key <LCTL> { [ Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L ] };
+    key <RCTL> { [ Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R ] };
+
+    // Special characters
+    key <TAB>  { [    Escape,    Escape,    Escape,    Escape,    Tab,    Tab,    Tab,    Tab ] };
+    key <SPCE> { [     space,     space,     space,     space, Return, Return, Return, Return ] };
+    key <AD11> { [ BackSpace, BackSpace, BackSpace, BackSpace, Delete, Delete, Delete, Delete ] };
+    key <AD12> { [ BackSpace, BackSpace, BackSpace, BackSpace, Delete, Delete, Delete, Delete ] };
+
+
+    // Keyboard layout
+    // First row
+    key <TLDE> { [   grave,   grave,   grave,   grave, Pointer_EnableKeys, Pointer_EnableKeys, Pointer_EnableKeys, Pointer_EnableKeys ] };
+    key <AE01> { [       1,       1,       1,       1,                 F1,                 F1,                 F1,                 F1 ] };
+    key <AE02> { [       2,       2,       2,       2,                 F2,                 F2,                 F2,                 F2 ] };
+    key <AE03> { [       3,       3,       3,       3,                 F3,                 F3,                 F3,                 F3 ] };
+    key <AE04> { [       4,       4,       4,       4,                 F4,                 F4,                 F4,                 F4 ] };
+    key <AE05> { [       5,       5,       5,       5,                 F5,                 F5,                 F5,                 F5 ] };
+    key <AE06> { [       6,       6,       6,       6,                 F6,                 F6,                 F6,                 F6 ] };
+    key <AE07> { [       7,       7,       7,       7,                 F7,                 F7,                 F7,                 F7 ] };
+    key <AE08> { [       8,       8,       8,       8,                 F8,                 F8,                 F8,                 F8 ] };
+    key <AE09> { [       9,       9,       9,       9,                 F9,                 F9,                 F9,                 F9 ] };
+    key <AE10> { [       0,       0,       0,       0,                F10,                F10,                F10,                F10 ] };
+    key <AE11> { [      at,      at,      at,      at,                F11,                F11,                F11,                F11 ] };
+    key <AE12> { [ percent, percent, percent, percent,                F12,                F12,                F12,                F12 ] };
+
+    // Second row
+    key <AD01> { [ q, Q,  bracketleft,  bracketleft,      0,      0,      0,      0 ] };
+    key <AD02> { [ w, W, bracketright, bracketright,      1,      1,      1,      1 ] };
+    key <AD03> { [ e, E,    parenleft,    parenleft,      2,      2,      2,      2 ] };
+    key <AD04> { [ r, R,   parenright,   parenright,      3,      3,      3,      3 ] };
+    key <AD05> { [ t, T,         plus,         plus,      4,      4,      4,      4 ] };
+    key <AD06> { [ y, Y,        minus,        minus,   Home,   Home,   Home,   Home ] };
+    key <AD07> { [ u, U,     asterisk,     asterisk,   Next,   Next,   Next,   Next ] };
+    key <AD08> { [ i, I,        slash,        slash,  Prior,  Prior,  Prior,  Prior ] };
+    key <AD09> { [ o, O,    backslash,    backslash,    End,    End,    End,    End ] };
+    key <AD10> { [ p, P,    semicolon,    semicolon, Insert, Insert, Insert, Insert ] };
+
+    // Third row
+    key <AC01> { [     a,     A,  braceleft,  braceleft,     5,     5,     5,     5 ] };
+    key <AC02> { [     s,     S, braceright, braceright,     6,     6,     6,     6 ] };
+    key <AC03> { [     d,     D,      less,        less,     7,     7,     7,     7 ] };
+    key <AC04> { [     f,     F,   greater,     greater,     8,     8,     8,     8 ] };
+    key <AC05> { [     g,     G,      equal,      equal,     9,     9,     9,     9 ] };
+    key <AC06> { [     h,     H, underscore, underscore,  Left,  Left,  Left,  Left ] };
+    key <AC07> { [     j,     J,     period,     period,  Down,  Down,  Down,  Down ] };
+    key <AC08> { [     k,     K,      comma,      comma,    Up,    Up,    Up,    Up ] };
+    key <AC09> { [     l,     L,     dollar,     dollar, Right, Right, Right, Right ] };
+    key <AC10> { [ aring, Aring,      colon,      colon, Print, Print, Print, Print ] };
+
+    // Fourth row
+    key <AB01> { [      z,        Z,  asciicircum,   asciicircum,        XF86AudioMute,        XF86AudioMute,        XF86AudioMute,        XF86AudioMute ] };
+    key <AB02> { [      x,        X,   asciitilde,    asciitilde, XF86AudioLowerVolume, XF86AudioLowerVolume, XF86AudioLowerVolume, XF86AudioLowerVolume ] };
+    key <AB03> { [      c,        C,    ampersand,     ampersand, XF86AudioRaiseVolume, XF86AudioRaiseVolume, XF86AudioRaiseVolume, XF86AudioRaiseVolume ] };
+    key <AB04> { [      v,        V,          bar,           bar,      Pointer_Button1,      Pointer_Button1,      Pointer_Button1,      Pointer_Button1 ] };
+    key <AB05> { [      b,        B,     quotedbl,      quotedbl,      Pointer_Button3,      Pointer_Button3,      Pointer_Button3,      Pointer_Button3 ] };
+    key <AB06> { [      n,        N,   apostrophe,    apostrophe,              KP_Left,              KP_Left,              KP_Left,              KP_Left ] }   y  key <AB07> { [      m,        M,     question,      question,              KP_Down,              KP_Down,              KP_Down,              KP_Down ] };
+    key <AB08> { [     ae,       AE,       exclam,        exclam,                KP_Up,                KP_Up,                KP_Up,                KP_Up   u;
+    key <AB09> { [ oslash, Ooblique,   numbersign,    numbersign,             KP_Right,             KP_Right,             KP_Right,             KP_Righ    i  o;
+
+
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "kbd" {
+    // kbd variant of layout with four modifier levels
+    // Use ckbcomp to convert from xkb to kbd with command:
+    // ckbcomp -layout zi -variant kbd > zi.map && sudo mkdir -p /usr/local/share/kbd/keymaps && sudo cp zi.map /usr/local/share/kbd/keymaps/zi.map
+    // Edit /etc/vconsole.conf to "KEYMAP=/usr/local/share/kbd/keymaps/zi.map"
+    // Run command: sudo mkinitcpio -P
+
+
+    // Combo keys
+    // Alt
+    key <LWIN> { [ Alt_L, Alt_L ] };
+    key <RWIN> { [ Alt_R, Alt_R ] };
+    key <MENU> { [ Alt_R, Alt_R ] };
+    key <PRSC> { [ Alt_R, Alt_R ] };
+
+    // Super
+    key <LALT> { [ Super_L, Super_L ] };
+    key <RALT> { [ Super_R, Super_R ] };
+
+    // Control
+    key <LCTL> { [ Control_L, Control_L ] };
+    key <RCTL> { [ Control_R, Control_R ] };
+
+    // Special characters
+    key <TAB>  { [       Tab,       Tab ] };
+    key <AD11> { [ BackSpace, BackSpace ] };
+    key <AD12> { [    Delete,    Delete ] };
+
+
+    // Modifier keys
+    // Shift modifier
+    key <LFSH> { [ Shift_L, Caps_Lock ] };
+    key <RTSH> { [ Shift_R, Caps_Lock ] };
+
+    // Symbol modifier
+    key <LSGT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <AB10> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+
+    // Function modifier
+    key <CAPS> { [ VoidSymbol, VoidSymbol ] };
+    key <AC11> { [ VoidSymbol, VoidSymbol ] };
+    key <BKSL> { [     Escape,     Escape ] };
+
+    // Modifier mapping
+    include "level3(modifier_mapping)"
+
+
+    // Keyboard layout
+    // Four modifier levels
+    key.type[Group1] = "FOUR_LEVEL";
+
+    // Space
+    key <SPCE> { [ space, space, space, Return ] };
+
+    // First row
+    key <TLDE> { [   grave,   grave,   grave, XF86PowerOff ] };
+    key <AE01> { [       1,       1,       1,           F1 ] };
+    key <AE02> { [       2,       2,       2,           F2 ] };
+    key <AE03> { [       3,       3,       3,           F3 ] };
+    key <AE04> { [       4,       4,       4,           F4 ] };
+    key <AE05> { [       5,       5,       5,           F5 ] };
+    key <AE06> { [       6,       6,       6,           F6 ] };
+    key <AE07> { [       7,       7,       7,           F7 ] };
+    key <AE08> { [       8,       8,       8,           F8 ] };
+    key <AE09> { [       9,       9,       9,           F9 ] };
+    key <AE10> { [       0,       0,       0,          F10 ] };
+    key <AE11> { [      at,      at,      at,          F11 ] };
+    key <AE12> { [ percent, percent, percent,          F12 ] };
+
+    // Second row
+    key <AD01> { [ q, Q,  bracketleft,      1 ] };
+    key <AD02> { [ w, W, bracketright,      2 ] };
+    key <AD03> { [ e, E,         less,      3 ] };
+    key <AD04> { [ r, R,      greater,      4 ] };
+    key <AD05> { [ t, T,     asterisk,      5 ] };
+    key <AD06> { [ y, Y,         plus,   Home ] };
+    key <AD07> { [ u, U,        minus,   Next ] };
+    key <AD08> { [ i, I,        slash,  Prior ] };
+    key <AD09> { [ o, O,    backslash,    End ] };
+    key <AD10> { [ p, P,    semicolon, Delete ] };
+
+    // Third row
+    key <AC01> { [     a,     A,  braceleft,      6 ] };
+    key <AC02> { [     s,     S, braceright,      7 ] };
+    key <AC03> { [     d,     D,  parenleft,      8 ] };
+    key <AC04> { [     f,     F, parenright,      9 ] };
+    key <AC05> { [     g,     G,      equal,      0 ] };
+    key <AC06> { [     h,     H, underscore,   Left ] };
+    key <AC07> { [     j,     J,     period,   Down ] };
+    key <AC08> { [     k,     K,      comma,     Up ] };
+    key <AC09> { [     l,     L,     dollar,  Right ] };
+    key <AC10> { [ aring, Aring,      colon, Escape ] };
+
+    // Fourth row
+    key <AB01> { [      z,        Z, asciicircum,                 Print ] };
+    key <AB02> { [      x,        X,  asciitilde,         XF86AudioMute ] };
+    key <AB03> { [      c,        C,   ampersand,  XF86AudioLowerVolume ] };
+    key <AB04> { [      v,        V,         bar,  XF86AudioRaiseVolume ] };
+    key <AB05> { [      b,        B,  numbersign,         XF86AudioPlay ] };
+    key <AB06> { [      n,        N,  apostrophe,         XF86AudioPrev ] };
+    key <AB07> { [      m,        M,    quotedbl,         XF86AudioNext ] };
+    key <AB08> { [     ae,       AE,      exclam, XF86MonBrightnessDown ] };
+    key <AB09> { [ oslash, Ooblique,    question,   XF86MonBrightnessUp ] };
+};

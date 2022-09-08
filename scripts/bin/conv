@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ $# -eq 3 ]; then
+	rate=$(curl -s "https://$3.rate.sx/1$2")
+	python -c "print($rate*$1)"
+else
+	echo "Error: Not enough arguments"
+fi

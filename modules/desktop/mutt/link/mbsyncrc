@@ -1,0 +1,50 @@
+IMAPStore mail@rasmuskirk.com-remote
+Host imap.mailbox.org
+Port 993
+User mail@rasmuskirk.com
+PassCmd "cat /data/.secret/mail/mail@rasmuskirk.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore mail@rasmuskirk.com-local
+Subfolders Verbatim
+Path /home/user/.local/share/mail/mail@rasmuskirk.com/
+Inbox /home/user/.local/share/mail/mail@rasmuskirk.com/INBOX
+
+Channel mail@rasmuskirk.com
+Expunge Both
+Master :mail@rasmuskirk.com-remote:
+Slave :mail@rasmuskirk.com-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+
+IMAPStore au650209@uni.au.dk-remote
+Host post.au.dk
+Port 993
+User au650209@uni.au.dk
+PassCmd "cat /data/.secret/mail/au650209@uni.au.dk"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore au650209@uni.au.dk-local
+Subfolders Verbatim
+Path /home/user/.local/share/mail/au650209@uni.au.dk/
+Inbox /home/user/.local/share/mail/au650209@uni.au.dk/INBOX
+
+Channel au650209@uni.au.dk
+Expunge Both
+Master :au650209@uni.au.dk-remote:
+Slave :au650209@uni.au.dk-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
