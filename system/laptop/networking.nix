@@ -31,6 +31,7 @@ in {
 			"Kitchen 23.1"      = {psk = "@KITCHEN@";};
 			"kummebanden"       = {psk = "@JAKOB@";};
 			"NKB-Network"       = {psk = "@NKB@";};
+			"hcbeg2bfh1"        = {psk = "@FINN_HOUSE@";};
 			"🍆💦🍑"            = {psk = "@WILLIAM@";};
 			"🍆💦💩"            = {psk = "@WILLIAM@";};
 			"🤜🤰"              = {psk = "@ROOM@";};

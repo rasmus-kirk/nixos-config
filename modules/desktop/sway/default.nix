@@ -55,7 +55,7 @@ let
 			set $right l
 
 		### Startup programs
-			exec ${term} --app-id=popterm --title=popterm sh -c "cd /data; zsh
+			exec ${term} --app-id=popterm --title=popterm sh -c "cd /data; zsh"
 			exec keepassxc --keyfile "" /data/.secret/keepassxc/Passwords.kdbx
 
 			for_window [app_id="popterm"] {
