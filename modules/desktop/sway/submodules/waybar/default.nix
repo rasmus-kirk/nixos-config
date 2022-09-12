@@ -33,10 +33,19 @@ let
 	'';
 
 	update-wanikani = pkgs.writeShellScript "update-wanikani" ''
-		curl -s "https://api.wanikani.com/v2/summary" \
-			-H "Wanikani-Revision: 20170710" \
-			-H "Authorization: Bearer ${config.age.secrets.newsboat-urls.path}" |
-			jq ".data.reviews[0].subject_ids | length" > $HOME/.cache/wanikani/unread
+		mkdir -p $HOME/.cache/wanikani
+		unread=$(
+			curl -s "https://api.wanikani.com/v2/summary" \
+				-H "Wanikani-Revision: 20170710" \
+				-H "Authorization: Bearer ${config.age.secrets.newsboat-urls.path}" |
+				jq ".data.reviews[0].subject_ids | length"
+		)
+
+		if [ ! -z $unread ]; then
+			echo $unread > $HOME/.cache/wanikani/unread
+		elif [ -z $(cat $HOME/.cache/wanikani/unread)]; then
+			echo 0 > $HOME/.cache/wanikani/unread
+		fi
 	'';
 
 	waybar-config = pkgs.writeText "config" ''
