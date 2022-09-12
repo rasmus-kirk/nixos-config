@@ -139,7 +139,7 @@ let
 		"signal": 1,
 		"on-click": "foot neomutt",
 	}
-	"custom/mail": {
+	"custom/wanikani": {
 		"return-type": "json",
 		"exec": "${get-wanikani}",
 		"interval": 3,
