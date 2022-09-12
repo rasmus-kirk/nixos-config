@@ -1,4 +1,4 @@
-username: colorscheme: term: { config, pkgs, ... }:
+username: colorscheme: term: wanikani: { config, pkgs, lib, ... }:
 let
 	get-mail = pkgs.writeShellScript "get-mail" ''
 		unread=$(find /home/${username}/.local/share/mail/*/[Ii][Nn][Bb][Oo][Xx]/new -type f | wc -l 2>/dev/null)
@@ -21,7 +21,25 @@ let
 		echo '{"text":"'$unread'  ","class":"'$class'"}'
 	'';
 
-	config = pkgs.writeText "config" ''
+	get-wanikani = pkgs.writeShellScript "get-wanikani" ''
+		unread=$(cat $HOME/.cache/wanikani/unread)
+
+		if [[ $unread == 0 ]]; then
+			class=no_reviews
+		else
+			class=reviews
+		fi
+		echo '{"text":"'$unread'  日","class":"'$class'"}'
+	'';
+
+	update-wanikani = pkgs.writeShellScript "update-wanikani" ''
+		curl -s "https://api.wanikani.com/v2/summary" \
+			-H "Wanikani-Revision: 20170710" \
+			-H "Authorization: Bearer ${config.age.secrets.newsboat-urls.path}" |
+			jq ".data.reviews[0].subject_ids | length" > $HOME/.cache/wanikani/unread
+	'';
+
+	waybar-config = pkgs.writeText "config" ''
 {
 	"height": 30, // Waybar height (to be removed for auto height)
 	"modules-left": ["sway/workspaces"],
@@ -121,6 +139,12 @@ let
 		"signal": 1,
 		"on-click": "foot neomutt",
 	}
+	"custom/mail": {
+		"return-type": "json",
+		"exec": "${get-wanikani}",
+		"interval": 3,
+		"signal": 1,
+	}
 }
 	'';
 
@@ -210,6 +234,14 @@ let
 				background-color: #${colorscheme.bright.black};
 			}
 
+			#custom-wanikani.reviews {
+				background-color: #${colorscheme.green};
+			}
+
+			#custom-wanikani.no_reviews {
+				background-color: #${colorscheme.bright.black};
+			}
+
 			#clock {
 				background-color: transparent;
 			}
@@ -278,8 +310,15 @@ in
 
 	systemd.tmpfiles.rules = [
 		"L+ /home/${username}/.config/waybar/style.css  - - - -  ${style}"
-		"L+ /home/${username}/.config/waybar/config     - - - -  ${config}"
+		"L+ /home/${username}/.config/waybar/config     - - - -  ${waybar-config}"
 	];
+
+	services.cron = {
+		enable = true;
+		systemCronJobs = [
+			"*/5 * * * *  ${username}  ${update-wanikani}"
+		];
+	};
 
 	systemd.user.services.waybar = {
 		description = "Waybar";
@@ -291,5 +330,4 @@ in
 			Restart = "always";
 		};
 	};
-
 }

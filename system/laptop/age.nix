@@ -8,4 +8,5 @@
 	age.secrets.mail-personal.file = "/root/per/data/.secret/mail-personal.age";
 	age.secrets.mail-university.file = "/root/per/data/.secret/mail-university.age";
 	age.secrets.newsboat-urls.file = "/root/per/data/.secret/newsboat-urls.age";
+	age.secrets.wanikani.file = "/root/per/data/.secret/wanikani.age";
 }

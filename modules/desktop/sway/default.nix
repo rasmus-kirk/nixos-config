@@ -46,7 +46,7 @@ let
 		fi
 	'';
 
-	config = pkgs.writeText "config" ''
+	sway-config = pkgs.writeText "config" ''
 		### Variables
 			set $mod Mod4
 			set $left h
@@ -293,7 +293,7 @@ in {
 	};
 
 	systemd.tmpfiles.rules = [
-		"L+ /home/${username}/.config/sway/config - - - - ${config}"
+		"L+ /home/${username}/.config/sway/config - - - - ${sway-config}"
 		"L+ /home/user/.xkb - - - - ${./link/xkb}"
 	];
 
