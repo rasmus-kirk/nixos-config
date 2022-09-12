@@ -29,7 +29,7 @@ let
 		else
 			class=reviews
 		fi
-		echo '{"text":"'$unread'  日","class":"'$class'"}'
+		echo '{"text":"'$unread'  復習","class":"'$class'"}'
 	'';
 
 	update-wanikani = pkgs.writeShellScript "update-wanikani" ''
