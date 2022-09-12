@@ -166,7 +166,7 @@ in {
 	users.mutableUsers = false;
 	users.users.user = {
 		isNormalUser = true;
-		extraGroups = [ "wheel" "networkmanager" "docker" "mpd" ];
+		extraGroups = [ "wheel" "networkmanager" "docker"];
 		passwordFile = config.age.secrets.user.path;
 	};
 
