@@ -44,7 +44,7 @@ let
 	"height": 30, // Waybar height (to be removed for auto height)
 	"modules-left": ["sway/workspaces"],
 	"modules-center": ["sway/window"],
-	"modules-right": [ "custom/mail", "custom/wanikani" "pulseaudio", "network", "battery", "clock"],
+	"modules-right": [ "custom/mail", "custom/wanikani", "pulseaudio", "network", "battery", "clock"],
 	"keyboard-state": {
 		"numlock": true,
 		"capslock": true,
