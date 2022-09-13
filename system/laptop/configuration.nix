@@ -139,6 +139,12 @@ in {
 	i18n.inputMethod.enabled = "fcitx";
 	i18n.inputMethod.fcitx.engines = with pkgs.fcitx-engines; [ mozc ];
 
+	environment.sessionVariables = {
+		QT_IM_MODULE  = "fcitx";
+		XMODIFIERS    = "@im=fcitx";
+		GTK_IM_MODULE = "fcitx";
+	};
+
 	# Closing lid does nothing
 	services.logind.lidSwitch = "ignore";
 
