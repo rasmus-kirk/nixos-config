@@ -261,6 +261,7 @@ let
 
 		### Systemd shit
 			exec "systemctl --user import-environment; systemctl --user start sway-session.target"
+			exec --no-startup-id fcitx -d
 			exec ${startup-volume}
 	'';
 in {
