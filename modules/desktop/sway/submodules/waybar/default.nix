@@ -37,7 +37,7 @@ let
 		unread=$(
 			curl -s "https://api.wanikani.com/v2/summary" \
 				-H "Wanikani-Revision: 20170710" \
-				-H "Authorization: Bearer ${config.age.secrets.wanikani.path}" |
+				-H "Authorization: Bearer $(cat /data/.secret/wanicani)" |
 				jq ".data.reviews[0].subject_ids | length"
 		)
 
