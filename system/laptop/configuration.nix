@@ -135,6 +135,10 @@ in {
 		];
 	};
 
+	# Japanese input
+	i18n.inputMethod.enabled = "fcitx";
+	i18n.inputMethod.fcitx.engines = with pkgs.fcitx-engines; [ mozc ];
+
 	# Closing lid does nothing
 	services.logind.lidSwitch = "ignore";
 
