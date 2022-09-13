@@ -38,6 +38,7 @@ in {
 		(import ./tmpfs.nix user args)
 
 		(import ../../modules/desktop/abook user args)
+		(import ../../modules/desktop/anki user args)
 		(import ../../modules/desktop/calcurse user args)
 		(import ../../modules/desktop/deemix user args)
 		(import ../../modules/desktop/foot user colorscheme args)
