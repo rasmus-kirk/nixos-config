@@ -136,13 +136,13 @@ in {
 	};
 
 	# Japanese input
-	i18n.inputMethod.enabled = "fcitx";
-	i18n.inputMethod.fcitx.engines = with pkgs.fcitx-engines; [ mozc ];
+	i18n.inputMethod.enabled = "ibus";
+	i18n.inputMethod.ibus.engines = with pkgs.ibus-engines; [ mozc ];
 
 	environment.sessionVariables = {
-		QT_IM_MODULE  = "fcitx";
-		XMODIFIERS    = "@im=fcitx";
-		GTK_IM_MODULE = "fcitx";
+		QT_IM_MODULE  = "ibus";
+		XMODIFIERS    = "@im=ibus";
+		GTK_IM_MODULE = "ibus";
 	};
 
 	# Closing lid does nothing
