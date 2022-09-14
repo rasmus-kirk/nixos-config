@@ -118,7 +118,7 @@ let
 
 			# Keyboard (zi is a custom layout in ~/.xkb/symbols/zi)
 			input type:keyboard {
-				xkb_layout "zi,dk"
+				xkb_layout "zi,dk,jp"
 				repeat_rate 45
 				repeat_delay 225
 			}
