@@ -112,9 +112,9 @@ let
 				middle_emulation enabled
 			}
 
-			#input "Lenovo ThinkPad Compact USB Keyboard with TrackPoint" {
-			#	pointer_accel 0.5
-			#}
+			input "Lenovo ThinkPad Compact USB Keyboard with TrackPoint" {
+				pointer_accel 2
+			}
 
 			# Keyboard (zi is a custom layout in ~/.xkb/symbols/zi)
 			input type:keyboard {
