@@ -113,7 +113,7 @@ let
 			}
 
 			input "Lenovo ThinkPad Compact USB Keyboard with TrackPoint" {
-				pointer_accel 2
+				pointer_accel 1
 			}
 
 			# Keyboard (zi is a custom layout in ~/.xkb/symbols/zi)
