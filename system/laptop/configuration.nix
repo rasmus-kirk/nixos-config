@@ -50,7 +50,7 @@ in {
 		(import ../../modules/desktop/mutt user args)
 		(import ../../modules/desktop/mvi user args)
 		(import ../../modules/desktop/newsboat user args)
-		#(import ../../modules/desktop/nheko user args)
+		(import ../../modules/desktop/nheko user args)
 		(import ../../modules/desktop/qbittorrent user args)
 		(import ../../modules/desktop/ssh user args)
 		(import ../../modules/desktop/steam user args)
