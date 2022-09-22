@@ -48,6 +48,11 @@ let
 		fi
 	'';
 
+	clear-wanikani = pkgs.writeShellScript "clear-wanikani" ''
+		mkdir -p $HOME/.cache/wanikani
+		echo 0 > $HOME/.cache/wanikani/unread
+	'';
+
 	waybar-config = pkgs.writeText "config" ''
 {
 	"height": 30, // Waybar height (to be removed for auto height)
@@ -153,6 +158,7 @@ let
 		"exec": "${get-wanikani}",
 		"interval": 3,
 		"signal": 1,
+		"on-click": "${clear-wanikani}",
 	}
 }
 	'';
